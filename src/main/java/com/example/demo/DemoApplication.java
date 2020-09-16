@@ -1,8 +1,10 @@
 package com.example.demo;
 
+import jdk.nashorn.internal.runtime.logging.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+@Logger
 @SpringBootApplication
 public class DemoApplication {
 
