@@ -1,12 +1,9 @@
 package com.example.demo
 
-import org.springframework.data.repository.CrudRepository
+import org.springframework.data.jpa.repository.JpaRepository
+import org.springframework.stereotype.Repository
 
-interface ArticleRepository: CrudRepository<Article, Long> {
-    fun findBySlug(slug: String): Article?
-    fun findAllByOrderByAddedAtDesc(): Iterable<Article>
-}
 
-interface UserRepository: CrudRepository<User, Long> {
-    fun findByLogin(login: String): User?
-}
+//no need for unneccessary braces and such here!
+@Repository
+interface ChoicesRepository: JpaRepository<Choices, Long>
